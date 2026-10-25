@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1000" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(570 360 -470 740 950 430)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3984d4" stop-opacity=".34"/>
+      <stop offset=".5" stop-color="#235087" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#0b0e14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="petal" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#80c2ff" stop-opacity=".9"/>
+      <stop offset=".46" stop-color="#5796d2" stop-opacity=".66"/>
+      <stop offset="1" stop-color="#426fa9" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="stem" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#426fa9" stop-opacity=".35"/>
+      <stop offset=".5" stop-color="#68adf1" stop-opacity=".75"/>
+      <stop offset="1" stop-color="#80c2ff" stop-opacity=".35"/>
+    </linearGradient>
+    <filter id="soft" width="1.4" height="1.4" x="-.2" y="-.2">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <g id="petal-shape" stroke="url(#petal)" stroke-width="1.25">
+      <path d="M0 4C-26-20-39-66-29-105-22-133-6-157 0-171 10-149 26-127 31-100 38-64 23-20 0 4Z"/>
+      <path d="M0-4c-3-38-4-91 0-160" opacity=".44"/>
+      <path d="M-2-21c-8-17-16-27-25-37m27 19c8-20 15-34 24-47" opacity=".33"/>
+    </g>
+    <g id="leaf-shape" stroke="url(#stem)" stroke-width="1.5">
+      <path d="M0 0C31-55 102-83 152-62 124-17 54 18 0 0Z"/>
+      <path d="M2-1c43-17 83-37 142-58M48-20l-8-23m38 8 1-27m25 8 12-20" opacity=".64"/>
+      <path d="M0 0c37-20 82-39 143-57" stroke-dasharray="2 8" opacity=".46"/>
+    </g>
+    <g id="flower">
+      <g opacity=".79">
+        <use href="#petal-shape" transform="rotate(0)"/>
+        <use href="#petal-shape" transform="rotate(30)"/>
+        <use href="#petal-shape" transform="rotate(60)"/>
+        <use href="#petal-shape" transform="rotate(90)"/>
+        <use href="#petal-shape" transform="rotate(120)"/>
+        <use href="#petal-shape" transform="rotate(150)"/>
+        <use href="#petal-shape" transform="rotate(180)"/>
+        <use href="#petal-shape" transform="rotate(210)"/>
+        <use href="#petal-shape" transform="rotate(240)"/>
+        <use href="#petal-shape" transform="rotate(270)"/>
+        <use href="#petal-shape" transform="rotate(300)"/>
+        <use href="#petal-shape" transform="rotate(330)"/>
+      </g>
+      <circle r="38" fill="#15202d" fill-opacity=".85" stroke="#80c2ff" stroke-opacity=".75"/>
+      <circle r="27" stroke="#5796d2" stroke-opacity=".65"/>
+      <circle r="16" stroke="#68adf1" stroke-opacity=".65" stroke-dasharray="1 5"/>
+      <circle r="5" fill="#80c2ff" fill-opacity=".9"/>
+    </g>
+  </defs>
+  <path fill="url(#glow)" d="M0 0h1500v1000H0z"/>
+  <ellipse cx="960" cy="509" rx="430" ry="370" fill="#397fc0" fill-opacity=".12" filter="url(#soft)"/>
+  <g stroke="#96bde4" stroke-opacity=".28" stroke-width="1">
+    <path d="M707 865c109-97 174-213 220-328 33-82 57-172 131-264 52-65 132-113 211-133"/>
+    <path d="M735 864c89-123 130-202 194-324 62-117 100-195 183-267 56-48 118-74 186-96"/>
+    <path d="M683 866c121-105 204-197 274-318 57-98 93-174 151-237 53-57 122-100 203-123"/>
+    <path d="M789 846c58-96 104-183 140-267 48-112 75-182 158-263"/>
+    <path d="M618 841c122-79 212-180 270-285 44-79 83-172 164-250"/>
+  </g>
+  <g opacity=".85">
+    <use href="#leaf-shape" transform="translate(891 616) rotate(-30) scale(1.35)"/>
+    <use href="#leaf-shape" transform="translate(1057 415) rotate(204) scale(1.13)"/>
+    <use href="#leaf-shape" transform="translate(763 694) rotate(-18) scale(1.1)"/>
+    <use href="#leaf-shape" transform="translate(1200 296) rotate(190) scale(.91)"/>
+    <use href="#leaf-shape" transform="translate(979 525) rotate(215) scale(.78)"/>
+    <use href="#leaf-shape" transform="translate(675 777) rotate(195) scale(.86)"/>
+  </g>
+  <g transform="translate(1054 307) scale(1.24)">
+    <circle r="190" stroke="#80c2ff" stroke-opacity=".33"/>
+    <circle r="176" stroke="#5899d8" stroke-opacity=".34" stroke-dasharray="1 7"/>
+    <use href="#flower"/>
+  </g>
+  <g transform="translate(1280 562) scale(.7)" opacity=".8">
+    <circle r="168" stroke="#80c2ff" stroke-opacity=".36"/>
+    <circle r="152" stroke="#5899d8" stroke-opacity=".4" stroke-dasharray="2 8"/>
+    <use href="#flower"/>
+  </g>
+  <g transform="translate(817 221) scale(.47)" opacity=".77">
+    <circle r="176" stroke="#80c2ff" stroke-opacity=".34"/>
+    <use href="#flower"/>
+  </g>
+  <g stroke="#9bbde0" stroke-opacity=".38" stroke-width=".8">
+    <path d="M730 611c80-22 130-9 190 25m-222-2c88-12 139 1 198 37m-219-5c75 3 136 17 195 49"/>
+    <path d="M962 738c61-31 115-35 175-24m-188 51c73-23 129-22 187-4m-195 31c62-13 121-8 168 8"/>
+    <path d="M849 456c-45-68-65-137-61-212m80 199c-30-81-37-144-22-210m42 194c-11-65-6-134 17-200"/>
+  </g>
+  <g fill="#80c2ff" fill-opacity=".62">
+    <circle cx="708" cy="376" r="1.4"/><circle cx="774" cy="456" r="1"/><circle cx="925" cy="256" r="1.5"/>
+    <circle cx="1162" cy="179" r="1.2"/><circle cx="1241" cy="400" r="1.3"/><circle cx="1084" cy="688" r="1.1"/>
+    <circle cx="1353" cy="320" r="1.4"/><circle cx="936" cy="812" r="1.1"/><circle cx="1309" cy="753" r="1.2"/>
+  </g>
+  <path fill="url(#glow)" d="M0 0h1500v1000H0z"/>
+</svg>

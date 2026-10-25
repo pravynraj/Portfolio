@@ -1,13 +1,30 @@
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-menuToggle.addEventListener('click', () => {
-  const isOpen = navLinks.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.textContent = isOpen ? '×' : '☰';
+const menuButton = document.querySelector(".menu-toggle");
+const siteNav = document.querySelector(".site-nav");
+
+menuButton.addEventListener("click", () => {
+  const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+  setMenuOpen(!isOpen);
+  if (!isOpen) {
+    siteNav.querySelector("a").focus();
+  }
 });
-navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  navLinks.classList.remove('open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-  menuToggle.textContent = '☰';
-}));
-document.getElementById('year').textContent = new Date().getFullYear();
+
+siteNav.addEventListener("click", (event) => {
+  if (event.target.closest("a")) {
+    setMenuOpen(false);
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuButton.getAttribute("aria-expanded") === "true") {
+    setMenuOpen(false);
+    menuButton.focus();
+  }
+});
+
+function setMenuOpen(isOpen) {
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+  siteNav.setAttribute("aria-hidden", String(!isOpen));
+  siteNav.classList.toggle("is-open", isOpen);
+}
